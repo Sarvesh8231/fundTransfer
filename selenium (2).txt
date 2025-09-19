@@ -1,0 +1,217 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.youtube.com/");
+		driver.findElement(By.name("serach_query")).sendKeys("chatrapati shivaji maharaj");
+//		driver.findElement(By.name("btnK")).click();
+		
+	}
+
+}
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+	import org.openqa.selenium.By;
+	import org.openqa.selenium.WebDriver;
+	import org.openqa.selenium.chrome.ChromeDriver;
+
+	import io.github.bonigarcia.wdm.WebDriverManager;
+
+	public class test2 {
+
+	public static void main(String[] args) {
+	WebDriverManager.chromedriver().setup();
+	WebDriver driver = new ChromeDriver();
+	driver.get("https://www.saucedemo.com");
+	driver.findElement(By.xpath("//*[@id=\"user-name\"]")).sendKeys("standard_user");
+	driver.findElement(By.name("password")).sendKeys("secret_sauce");
+	driver.findElement(By.id("login-button")).click();
+
+	}
+
+	}
+//////////////////////////////////////////////
+1)sudo yum install docker 
+2)docker version 
+3)sudo docker login
+4)sudo service docker start
+5)sudo docker pull ubuntu
+6)sudo docker images
+7)sudo docker run ubuntu 
+8)touch dockerfile
+9)nano dockerfile
+///////////////////////////////////////////////////////////////
+
+mkdir my-first-project
+cd my-first-project
+echo "This is my first Git project" > notes.txt
+git status
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/username/my-first-project.git
+git remote -v
+git branch -M main
+git push -u origin main
+//////////////////////////////////////////////////////////////////////////////////////
+if-fi 
+
+Name="Girish"
+if [ "$Name" = "Girish" ]; then
+  echo "His name is Girish. It is true."
+fi
+
+====================
+if-else-fi 
+====================
+Age=17
+if [ "$Age" -ge 18 ]; then
+    echo "You can vote"
+else
+    echo "You cannot vote"    
+fi
+
+====================
+if-elif-else-fi 
+====================
+
+Age=17
+if [ "$Age" -ge 18 ]; then
+    echo "You can vote"
+elif [ "$Age" -eq 17 ]; then
+    echo "You can vote after one year"
+else
+    echo "You cannot vote"    
+fi
+
+====================
+Nested if-else
+====================
+
+echo "Enter subject"
+read subject
+
+if [ $subject == 'Linux' ]
+then
+echo "Enter Marks"
+read marks
+        if [ $marks -ge 30 ]
+        then
+        echo "You passed"
+        else
+        echo "You failed"
+        fi
+else
+echo "Wrong Subject"
+fi/////////////////////////////////////////////////////////////////////////////////////////////////
+====================================
+#/bin/bash
+
+a=0
+
+# lt is less than operator
+
+#Iterate the loop until a less than 10
+
+while [ $a -lt 10 ]
+do
+# Print the values
+echo $a
+# increment the value
+a=`expr $a + 1`
+done
+
+
+=============================
+
+#/bin/bash
+
+a=0
+
+# -gt is greater than operator
+#Iterate the loop until a is greater than 10
+
+until [ $a -gt 10 ]
+do
+
+# Print the values
+echo $a
+
+# increment the value
+a=`expr $a + 1`
+done
+
+==================
+Implementation of `for` Loop with `break` statement in Shell Script.
+
+#/bin/bash
+
+#Start of for loop
+
+for a in 1 2 3 4 5 6 7 8 9 10
+do
+
+# if a is equal to 5 break the loop
+if [ $a == 5 ]
+then
+break
+fi
+
+# Print the value
+echo “Iteration no $a”
+done
+
+==================
+
+Implementation of `for` Loop with `continue` statement in Shell Script.
+
+#/bin/bash
+
+for a in 1 2 3 4 5 6 7 8 9 10
+do
+
+# if a = 5 then continue the loop and
+# don’t move to line 8
+
+if [ $a == 5 ]
+then
+continue
+fi
+echo “Iteration no $a”
+done
+
+
+====================
+Implementing `until` Loop in Shell Script
+
+#/bin/bash
+
+a=0
+
+# -gt is greater than operator
+#Iterate the loop until a is greater than 10
+
+until [ $a -gt 10 ]
+do
+
+
+=======================
+Creating an Infinite Loop with “while true” in Shell Script
+
+#/bin/bash
+
+while true
+do
+
+# Command to be executed
+# sleep 1 indicates it sleeps for 1 sec
+echo “Hi, I am infinity loop”
+sleep 1
+done
